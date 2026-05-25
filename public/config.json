@@ -3,15 +3,15 @@
     {
       "tag": "v0.1.0-alpha",
       "name": "HackNow OS v0.1.0-alpha",
-      "date": "2026-05-24",
+      "date": "2026-05-25",
       "prerelease": true,
-      "changelog": "Birinchi alpha versiya. 60+ pentest tool, XFCE 4.18, Debian 12 Bookworm. O'zbek tili to'liq qo'llab-quvvatlanadi.",
+      "changelog": "Alpha versiya monorepo strukturasidan qayta yig'ildi (live-build orqali, avval manual xorriso ishlatilgan). 60+ pentest tool, XFCE 4.18, Debian 12 Bookworm. O'zbek tili to'liq qo'llab-quvvatlanadi.",
       "assets": [
         {
           "filename": "hacknow-os-v0.1.0-alpha-amd64.iso",
           "arch": "amd64",
-          "size": "4.0 GB",
-          "sha256": "48be9b91ce5f230c70141f8ae4898f477fed0dfceee684d977e15cbb8f74d430"
+          "size": "3.7 GB",
+          "sha256": "1fb3bc243429597f3eb2b72aaa37342576af9c4eac541f3f414e214bc73da941"
         }
       ]
     }
