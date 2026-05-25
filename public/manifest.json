@@ -1,0 +1,12 @@
+{
+  "name": "HackNow OS",
+  "short_name": "HackNow OS",
+  "description": "O'zbek pentesting distributivi — Debian asosida, CTF va kiberxavfsizlik uchun",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#FF1744",
+  "icons": [
+    { "src": "/hacknow-icon.png", "sizes": "any", "type": "image/png" }
+  ]
+}

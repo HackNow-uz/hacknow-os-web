@@ -1,0 +1,24 @@
+services:
+  hacknow-os-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: hacknow-os-web:latest
+    container_name: hacknow-os-web
+    restart: unless-stopped
+    ports:
+      - "3100:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
