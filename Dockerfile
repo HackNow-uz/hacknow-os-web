@@ -13,7 +13,12 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+# Next 16 standart bundleri Turbopack PostCSS bosqichida Node worker bilan
+# IPC orqali aloqa qiladi; bu prod host yadrosida (5.15) ishdan chiqadi
+# ("stream closed unexpectedly"). @tailwindcss/oxide native binari o'zi
+# soz ishlaydi, shu sababli webpack ishlatamiz: PostCSS in-process bajariladi,
+# Turbopack worker IPC butunlay chetlab o'tiladi.
+RUN npm run build -- --webpack
 
 # ── Stage 3: runner (hardened) ─────────────────────────────────────────────────
 FROM node:22-slim AS runner
