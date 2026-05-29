@@ -13,7 +13,9 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+# Turbopack (Next 16 default) musl/Alpine muhitida build paytida ishonchsiz
+# ("stream closed unexpectedly"). Production build webpack bilan bajariladi.
+RUN npm run build -- --webpack
 
 # ── Stage 3: runner (hardened) ─────────────────────────────────────────────────
 FROM node:22-alpine AS runner
